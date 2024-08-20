@@ -25,4 +25,5 @@ jobs:
 
       - name: print folder structure
         run: |
+          ls -a
           pwd
