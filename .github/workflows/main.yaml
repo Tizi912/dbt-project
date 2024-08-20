@@ -26,9 +26,6 @@ jobs:
       - name: print folder structure
         run: |
           cd airbnb_dbt
-          echo "$USER"
-          echo "$ACCOUNT"
-          echo "$PASSWORD"
           dbt debug
         env:
           USER: ${{ secrets.USER }}
