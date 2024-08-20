@@ -3,7 +3,7 @@ airbnb_dbt:
     dev:
       account: "{{ env_var('ACCOUNT') }}"
       database: AIRBNB
-      password: "{{ env_var('PASSWORD) }}"
+      password: "{{ env_var('PASSWORD') }}"
       role: transform
       schema: DEV
       threads: 1
