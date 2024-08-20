@@ -34,11 +34,7 @@ jobs:
         run: |
           cd airbnb_dbt
           dbt debug
-      - name: Create Seed
+      - name: Check everythin
         run: |
           cd airbnb_dbt
-          dbt seed
-      - name: Create View
-        run: |
-          cd airbnb_dbt
-          dbt run
+          dbt compile
