@@ -1,13 +1,13 @@
 airbnb_dbt:
   outputs:
     dev:
-      account: $ACCOUNT
+      account: "{{ env_var('ACCOUNT') }}"
       database: AIRBNB
-      password: $PASSWORD
+      password: "{{ env_var('PASSWORD') }}"
       role: transform
       schema: DEV
       threads: 1
       type: snowflake
-      user: $USER
+      user: "{{ env_var('USER') }}"
       warehouse: COMPUTE_WH
   target: dev
