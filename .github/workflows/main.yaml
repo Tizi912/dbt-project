@@ -27,3 +27,7 @@ jobs:
         run: |
           cd airbnb_dbt
           dbt debug
+        env:
+          USER: ${{ secrets.USER }}
+          ACCOUNT: ${{ secrets.ACCOUNT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
