@@ -21,16 +21,19 @@ jobs:
       - name: install DBT
         run: |
           python -m pip install --upgrade pip
-          pip install dbt-snowflake
+          pip install dbt-snowflake==1.7.1
+
+      - name: Create dbt profile
+        env:
+          PROFILES_YML: ${{ secrets.PROFILES_YML }}
+        run: |
+          mkdir -p ~/.dbt
+          echo "$PROFILES_YML" > ~/.dbt/profiles.yml
 
       - name: Check Connection
         run: |
           cd airbnb_dbt
           dbt debug
-        env:
-          USER: ${{ secrets.USER }}
-          ACCOUNT: ${{ secrets.ACCOUNT }}
-          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Create View
         run: |
