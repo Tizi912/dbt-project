@@ -1,13 +1,13 @@
 airbnb_dbt:
   outputs:
     dev:
-      account: jfdmlhi-dv66056
+      account: {{ secrets.ACCOUNT }}
       database: AIRBNB
-      password: dbtPassword123
+      password: {{ secrets.PASSWORD }}
       role: transform
       schema: DEV
       threads: 1
       type: snowflake
-      user: dbt
+      user: {{ secrets.USER }}
       warehouse: COMPUTE_WH
   target: dev
