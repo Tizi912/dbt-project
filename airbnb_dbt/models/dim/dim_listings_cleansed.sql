@@ -14,4 +14,4 @@ SELECT
     REPLACE(price_str, '$') :: NUMBER(10,2) AS price,
     created_at,
     updated_at
-FROM src_listings;
+FROM src_listings
