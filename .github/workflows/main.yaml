@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-snowflake
 
-      - name: print folder structure
+      - name: Check Connection
         run: |
           cd airbnb_dbt
           dbt debug
@@ -31,3 +31,7 @@ jobs:
           USER: ${{ secrets.USER }}
           ACCOUNT: ${{ secrets.ACCOUNT }}
           PASSWORD: ${{ secrets.PASSWORD }}
+
+      - name: Create View
+        run: |
+          dbt run
