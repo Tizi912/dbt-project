@@ -47,4 +47,4 @@ jobs:
       - name: Execute Tests
         run: |
           cd airbnb_dbt
-          dbt test
+          dbt test --store-failures
