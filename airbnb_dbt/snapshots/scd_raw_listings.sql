@@ -4,7 +4,7 @@
    config(       
        target_schema='dev',
        unique_key='id',
-       strategy='strategy',
+       strategy='timestamp',
        updated_at='updated_at',
        invalidates_hard_deletes=True
    )
