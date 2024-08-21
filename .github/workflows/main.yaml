@@ -43,3 +43,8 @@ jobs:
         run: |
           cd airbnb_dbt
           dbt snapshot
+
+      - name: Execute Tests
+        run: |
+          cd airbnb_dbt
+          dbt test
