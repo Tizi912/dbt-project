@@ -53,3 +53,8 @@ jobs:
         run: |
           cd airbnb_dbt
           dbt test --store-failures
+
+      - name: Run
+        run: |
+          cd airbnb_dbt
+          dbt run
