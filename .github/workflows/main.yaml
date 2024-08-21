@@ -39,6 +39,11 @@ jobs:
           cd airbnb_dbt
           dbt source freshness
 
+      - name: install packages
+        run: |
+          cd airbnb_dbt
+          dbt deps
+
       - name: Create Snapshot
         run: |
           cd airbnb_dbt
