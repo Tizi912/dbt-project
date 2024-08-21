@@ -38,3 +38,8 @@ jobs:
         run: |
           cd airbnb_dbt
           dbt source freshness
+
+      - name: Create Snapshot
+        run: |
+          cd airbnb_dbt
+          dbt snapshot
