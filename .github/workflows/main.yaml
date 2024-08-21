@@ -57,4 +57,4 @@ jobs:
       - name: Run
         run: |
           cd airbnb_dbt
-          dbt run
+          dbt run --full-refresh
